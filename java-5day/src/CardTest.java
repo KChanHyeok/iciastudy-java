@@ -1,6 +1,7 @@
 public class CardTest {
     public static void main(String[] args) {
         Etc.cv = 100;
+        Etc.method1();
         Etc e = new Etc();
         e.iv = 200;
         Etc e2 = new Etc();
