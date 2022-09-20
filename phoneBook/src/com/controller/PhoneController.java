@@ -196,11 +196,11 @@ public class PhoneController {
     private void inputData() {
         io.twoPrint("-- 연락처 입력--");
         io.twoPrint("--------------");
-        PhoneInfo pInfo = new PhoneInfo();
-        pInfo.setName(io.inStr("이름 : "));
-        pInfo.setPhone(io.inStr("연락처 : "));
-        pInfo.setBirth(io.inStr("생일(mm-dd) : "));
-        pInfo.setAge(io.inNum("나이 : "));
+//        pInfo.setName(io.inStr("이름 : "));
+//        pInfo.setPhone(io.inStr("연락처 : "));
+//        pInfo.setBirth(io.inStr("생일(mm-dd) : "));
+//        pInfo.setAge(io.inNum("나이 : "));
+        PhoneInfo pInfo = new PhoneInfo(io.inStr("이름 : "), io.inStr("연락처 : "), io.inStr("생일(mm-dd) : "), io.inNum("나이 : "));
         //연락처
         book.add(pInfo);
         io.twoPrint("입력완료.\n");
