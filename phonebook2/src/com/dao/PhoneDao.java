@@ -33,15 +33,48 @@ public class PhoneDao {
     public int pListSize(int cate) {
         int size = 0;
         switch (cate) {
-            case 1 :
+            case 1:
                 size = pList.size();
                 break;
-            case 2 :
+            case 2:
                 size = pSchList.size();
                 break;
-            case 3 :
+            case 3:
                 size = pComList.size();
         }
         return size;
     }// pListSize end
+
+    //각 list의 마지막 번호를 구하는 메소드
+    public int getLastNum(int cate) {
+        int lno = 0;
+
+        switch (cate) {
+            case 1:
+                //마지막 연락처의 일련번호(no) 구하기
+                int n = pList.size();
+                PhoneInfo p = pList.get(n-1);
+                lno = p.getNo();
+                //lno = pList.get(pList.size() - 1).getNo();
+                break;
+            case 2:
+                lno = pSchList.get(pSchList.size()-1).getNo();
+                break;
+            case 3:
+                lno = pComList.get(pComList.size()-1).getNo();
+                break;
+        }
+        return lno;
+    }// getLastNum
+
+    public PhoneInfo getPhoneInfo(int idx) {
+        return pList.get(idx);
+    }
+    public PhoneSchInfo getSchInfo(int idx)  {
+        return pSchList.get(idx);
+    }
+    public PhoneComInfo getComInfo(int idx) {
+        return pComList.get(idx);
+    }
+
 } // dao class end
