@@ -102,6 +102,8 @@ public class PhoneController {
             io.twoPrint(pDao.getComInfo(k).toString());
             io.twoPrint("--------------------");
         }
+
+
         io.twoPrint("출력완료! \n");
     }
 
@@ -165,36 +167,30 @@ public class PhoneController {
         } else {
             no = pDao.getLastNum(2) + 1;
         }
-
         PhoneSchInfo pInfo = new PhoneSchInfo();
-        pInfo.setNo(no); //일련번호 저장
-        pInfo.setName(io.inStr("이름 : "));
-        pInfo.setPhone(io.inStr("연락처 : "));
-        pInfo.setBirth(io.inStr("생일 : "));
-        pInfo.setAge(io.inNum("나이 : "));
-        pInfo.setSname(io.inStr("학교 : "));
-        pInfo.setMajor(io.inStr("전공 : "));
-        pInfo.setYear(io.inNum("학년 : "));
-
-        pDao.inputData(pInfo);
+        setInfo(pInfo, no);
     }
 
     private void inputNormal() {
         //각 구분별 연락처(일반, 학교, 회사)별 일련변호
+        int cate =1;
         int no = 0;
-        if (pDao.pListSize(1) == 0) {
+        if (pDao.pListSize(cate) == 0) {
             no = 1;
         } else {
             //마지막 데이터의 번호를 구하고 +1 한다.
-            no = pDao.getLastNum(1) + 1;
+            no = pDao.getLastNum(cate) + 1;
         }
         PhoneInfo pInfo = new PhoneInfo();
+        setInfo(pInfo, no);
+    }
+
+    private void setInfo(PhoneInfo pInfo, int no) {
         pInfo.setNo(no); //일련번호 저장
         pInfo.setName(io.inStr("이름 : "));
         pInfo.setPhone(io.inStr("연락처 : "));
         pInfo.setBirth(io.inStr("생일 : "));
         pInfo.setAge(io.inNum("나이 : "));
-
         pDao.inputData(pInfo);
     }
 

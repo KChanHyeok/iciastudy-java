@@ -67,6 +67,8 @@ public class PhoneDao {
         return lno;
     }// getLastNum
 
+
+
     public PhoneInfo getPhoneInfo(int idx) {
         return pList.get(idx);
     }
