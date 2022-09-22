@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class GuiButtonEx extends JFrame {
 
@@ -16,10 +18,33 @@ public class GuiButtonEx extends JFrame {
         c.setLayout(new FlowLayout());
 
         //버튼 추가
-        JButton btn = new JButton("Action");
-        c.add(btn);
+        JButton btn1 = new JButton("Action");
+        c.add(btn1);
+
+        MyActionListener mal = new MyActionListener();
+        btn1.addActionListener(mal);
+
         JButton btn2 = new JButton("Action2");
         c.add(btn2);
+
+        InnerActionListener ial = new InnerActionListener();
+        btn2.addActionListener(ial);
+
+        JButton btn3 = new JButton("Action3");
+        c.add(btn3);
+        btn3.addActionListener(new ActionListener() {
+            // 익명 클래스(전용 기능 제공 객체)
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JButton b =(JButton)e.getSource();
+                if(b.getText().equals("Action3")) {
+                    b.setText("액션3");
+                }else {
+                    b.setText("Action3");
+                }
+                setTitle(b.getText());
+            }
+        });
 
         //화면 크기 설정
         setSize(350, 150);
@@ -27,8 +52,31 @@ public class GuiButtonEx extends JFrame {
         setVisible(true);
     }
 
+    class InnerActionListener implements ActionListener {
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            GuiButtonEx.this.setTitle("바뀐 제목!");
+        }
+    }
+
     public static void main(String[] args) {
             new GuiButtonEx();
     }
 
+} // class end
+
+//버튼 이벤트 처리용 객체
+class MyActionListener implements ActionListener {
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // 이벤트가 발생한 버튼의 정보를 받는다.
+        JButton b = (JButton)e.getSource();
+        if(b.getText().equals("Action")) {
+            b.setText("액션");
+        }else {
+            b.setText("Action");
+        }
+    }
 }
