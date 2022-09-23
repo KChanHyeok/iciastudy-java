@@ -1,0 +1,43 @@
+
+
+StringBuffer
+    임시 저장고. 문자열 수정, 변경 등의 작업의 효율성을 높이는
+    보조 객체.
+    1) append(str) : 버퍼에 새 문자열을 추가.(뒤에 붙인다.)
+    2) capacity() : 용량. 버퍼의 크기
+    3) length() : 문자열의 길이
+    4) delete(st, ed) : 지정된 범위의 문자열 삭제
+    5) insert(idx, str) : 지정된 위치(idx)에 str삽입.
+    6) replace(st, ed, str) : 지정된 범위의 문자열을 str로 변경.
+    7) reverse() : 문자열의 순서를 역순으로 정렬.
+    8) charAt(idx) : 지정된 위치의 문자를 가져온다.
+    9) setCharAt(idx, char) : 지정된 위치에 문자를 변경한다.
+
+    StringBuffer에서 작업한 내용은 마지막 문자열로 변환이 필요
+    toString() 메소드를 활용.
+
+날짜와 시간(Calender class)
+    활용 클래스
+        java.util 패키지 Date, Calendar class
+        java.time 패키지 SimpleDateFormat class
+
+        SimpleDateFormat의 날짜와 시간 표기 기호
+        G : AD/BC 등 연호
+        y : 연도, M : 월, d : 일, E : 요일
+        a : 오전/오후, h : 시간, m : 분, s : 초, S : 밀리초
+        k/H : 24시간 주기 시
+        w : week of year, W : week of month
+        D : day of year, F : day of week
+
+Calendar : 날짜와 시간의 보편적인 사용을 위한 클래스
+    싱글톤(Singleton) 패턴을 사용하여 인스턴스 생성.
+    싱글톤 패턴 : 프로그램이 실행 중일 때 인스턴스를 하나만 생성하도록
+                제약하는 방식.
+                인스턴스를 사용하려는 다른 클래스에서 만들지(생성하지) 못하게 하고
+                스스로 만들어서 인스턴스를 제공하는 방식.
+
+파일(File)
+
+프로그램에서 발생된 데이터를 유지하는 방법
+    1) 파일을 활용하는 방법
+    2) Database를 활용하는 방법

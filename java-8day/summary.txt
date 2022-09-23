@@ -116,9 +116,13 @@ StringBuffer
     8) charAt(idx) : 지정된 위치의 문자를 가져온다.
     9) setCharAt(idx, char) : 지정된 위치에 문자를 변경한다.
 
+날짜와 시간
+ 싱글톤()
+
 파일(File)
 
-날짜와 시간
+
+
 
 실습) 일기장 만들기
 
