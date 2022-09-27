@@ -1,0 +1,13 @@
+New Project > java-10day > summary.txt
+
+파일 입출력
+    파일로 부터 데이터를 가져오거나(입력), 파일로 데이터를
+    보내는(출력) 처리.
+
+    필요 클래스
+    1. File 클래스
+    2. 파일 입출력용 스트림 클래스
+        FileInputStream/FileOutputStream : byte 단위
+        FileReader/FileWriter : 문자 단위
+    3. 보조 입출력용 스트림 클래스
+        BufferedReader/BufferedWriter : 문장/한줄 단위
