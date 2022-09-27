@@ -1,9 +1,11 @@
 package com.controller;
 
+import com.dto.DiaryInfo;
 import com.view.InOutClass;
 
-public class ControllerClass {
+import java.util.Calendar;
 
+public class ControllerClass {
     InOutClass io = new InOutClass();
     public void run() {
         int menu = -1;
@@ -38,9 +40,12 @@ public class ControllerClass {
     private void inputData() {
         io.twoPrint("✨✨✨나만의 일기 작성하기✨✨✨");
         io.twoPrint("===============================");
-        io.inStr("제목 : ");
-        io.inStr("내용 : ");
+        DiaryInfo dInfo = new DiaryInfo();
+        Calendar cal = Calendar.getInstance();
 
+        dInfo.setTitle(io.inStr("제목 : "));
+        dInfo.setContent(io.inStr("내용 : "));
+        dInfo.setDate(cal.get(Calendar.YEAR)+""+(cal.get(Calendar.MONTH)+1)+""+(cal.get(Calendar.DATE)));
     }
 
     private void menuShow() {

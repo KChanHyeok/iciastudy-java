@@ -2,7 +2,7 @@ package com.dto;
 
 public class DiaryInfo {
     private String title;
-    private String contant;
+    private String content;
     private String date;
 
     public String getTitle() {
@@ -13,12 +13,12 @@ public class DiaryInfo {
         this.title = title;
     }
 
-    public String getContant() {
-        return contant;
+    public String getContent() {
+        return content;
     }
 
-    public void setContant(String contant) {
-        this.contant = contant;
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public String getDate() {
