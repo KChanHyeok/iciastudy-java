@@ -29,7 +29,7 @@ public class InOutClass {
     }
 
     public void onePrint(String str) {
-        System.out.println(str);
+        System.out.print(str);
     }
 
     public void twoPrint(String str) {
