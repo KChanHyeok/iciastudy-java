@@ -91,6 +91,7 @@ public class ControllerClass {
                     outputData();
                     break;
                 case 3:
+                    updateData();
                     break;
                 case 4:
                     break;
@@ -101,6 +102,10 @@ public class ControllerClass {
                     break;
             }
         }
+    }
+
+    private void updateData() {
+
     }
 
     private void outputData() {
