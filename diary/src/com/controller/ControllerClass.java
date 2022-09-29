@@ -11,9 +11,21 @@ import java.util.Calendar;
 
 public class ControllerClass {
     InOutClass io = new InOutClass();
+    File folder = new File("data");
+
+    File[] list =folder.listFiles();
     BufferedWriter bw = null;
     FileWriter fw = null;
+    int cnt = 1;
     public void run() {
+        if(!folder.isDirectory()){
+            if(folder.mkdir()){ //폴더 생성 메소드 mkdir()
+                System.out.println("생성 성공");
+            }
+            else {
+                System.out.println("생성 실패");
+            }
+        }// if end
         int menu = -1;
         io.twoPrint("✨✨✨나만의 일기✨✨✨");
         while (true) {
@@ -25,10 +37,10 @@ public class ControllerClass {
             }
             switch (menu) {
                 case 1:
-                    makeFolder();
                     inputData();
                     break;
                 case 2:
+                    outputData();
                     break;
                 case 3:
                     break;
@@ -43,21 +55,40 @@ public class ControllerClass {
         }
     }
 
+    private void outputData() {
+        io.twoPrint("✨✨✨나의일기들✨✨✨");
+        if(list.length==0) {
+            io.twoPrint("작성한일기가 없습니다.\n");
+            return;
+        }
+        for(File f : list) {
+            io.twoPrint(f.toString());
+        }
+    }
+
     private void inputData() {
         io.twoPrint("✨✨✨나만의 일기 작성하기✨✨✨");
         io.twoPrint("===============================");
         Calendar cal = Calendar.getInstance();
         String today = (cal.get(Calendar.YEAR)+""+(cal.get(Calendar.MONTH)+1)+""+(cal.get(Calendar.DATE)));
         try {
-            File file = new File("data\\"+today+".txt");
+            File file = new File("data\\"+today+"-"+cnt+".txt");
             fw = new FileWriter(file, true);
             bw = new BufferedWriter(fw);
+            bw.write(today+"\n");
             bw.write("제목 : "+io.inStr("제목 : ")+"\n\n");
             bw.write(io.inStr("내용 : "));
             bw.flush();
             System.out.println("저장성공");
+            cnt++;
         } catch (IOException e) {
             e.printStackTrace();
+        }
+        try{
+            bw.close();
+            fw.close();
+        }catch (IOException ie) {
+
         }
     }
 
@@ -69,17 +100,4 @@ public class ControllerClass {
         io.twoPrint("5. 일기검색");
         io.twoPrint("0. 종료");
     }
-    private static void makeFolder() {
-        String path = "data";
-        File folder = new File(path);
-
-        if(!folder.isDirectory()){
-            if(folder.mkdir()){ //폴더 생성 메소드 mkdir()
-                System.out.println("생성 성공");
-            }
-            else {
-                System.out.println("생성 실패");
-            }
-        }// if end
-    } // makeFolder end
 }
