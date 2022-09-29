@@ -3,14 +3,19 @@ package com.controller;
 import com.dto.DiaryInfo;
 import com.view.InOutClass;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Calendar;
 
 public class ControllerClass {
     InOutClass io = new InOutClass();
+    BufferedWriter bw = null;
+    FileWriter fw = null;
     public void run() {
         int menu = -1;
         io.twoPrint("✨✨✨나만의 일기✨✨✨");
-
         while (true) {
             menuShow();
             menu = io.inNum("입력> ");
@@ -20,6 +25,7 @@ public class ControllerClass {
             }
             switch (menu) {
                 case 1:
+                    makeFolder();
                     inputData();
                     break;
                 case 2:
@@ -40,12 +46,19 @@ public class ControllerClass {
     private void inputData() {
         io.twoPrint("✨✨✨나만의 일기 작성하기✨✨✨");
         io.twoPrint("===============================");
-        DiaryInfo dInfo = new DiaryInfo();
         Calendar cal = Calendar.getInstance();
-
-        dInfo.setTitle(io.inStr("제목 : "));
-        dInfo.setContent(io.inStr("내용 : "));
-        dInfo.setDate(cal.get(Calendar.YEAR)+""+(cal.get(Calendar.MONTH)+1)+""+(cal.get(Calendar.DATE)));
+        String today = (cal.get(Calendar.YEAR)+""+(cal.get(Calendar.MONTH)+1)+""+(cal.get(Calendar.DATE)));
+        try {
+            File file = new File("data\\"+today+".txt");
+            fw = new FileWriter(file, true);
+            bw = new BufferedWriter(fw);
+            bw.write("제목 : "+io.inStr("제목 : ")+"\n\n");
+            bw.write(io.inStr("내용 : "));
+            bw.flush();
+            System.out.println("저장성공");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void menuShow() {
@@ -56,4 +69,17 @@ public class ControllerClass {
         io.twoPrint("5. 일기검색");
         io.twoPrint("0. 종료");
     }
+    private static void makeFolder() {
+        String path = "data";
+        File folder = new File(path);
+
+        if(!folder.isDirectory()){
+            if(folder.mkdir()){ //폴더 생성 메소드 mkdir()
+                System.out.println("생성 성공");
+            }
+            else {
+                System.out.println("생성 실패");
+            }
+        }// if end
+    } // makeFolder end
 }
