@@ -3,6 +3,7 @@ package com.controller;
 import com.dto.DiaryInfo;
 import com.view.InOutClass;
 
+import java.io.File;
 import java.util.Calendar;
 
 public class ControllerClass {
@@ -10,6 +11,9 @@ public class ControllerClass {
     public void run() {
         int menu = -1;
         io.twoPrint("✨✨✨나만의 일기✨✨✨");
+
+        File folder = new File("date");
+
 
         while (true) {
             menuShow();
@@ -46,6 +50,8 @@ public class ControllerClass {
         dInfo.setTitle(io.inStr("제목 : "));
         dInfo.setContent(io.inStr("내용 : "));
         dInfo.setDate(cal.get(Calendar.YEAR)+""+(cal.get(Calendar.MONTH)+1)+""+(cal.get(Calendar.DATE)));
+
+
     }
 
     private void menuShow() {
