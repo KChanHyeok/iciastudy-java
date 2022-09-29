@@ -1,10 +1,20 @@
 package com.dto;
 
 public class DiaryInfo {
+    private  int no;
     private String title;
+
+
     private String content;
     private String date;
 
+    public int getNo() {
+        return no;
+    }
+
+    public void setNo(int no) {
+        this.no = no;
+    }
     public String getTitle() {
         return title;
     }

@@ -3,33 +3,78 @@ package com.controller;
 import com.dto.DiaryInfo;
 import com.view.InOutClass;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.nio.Buffer;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class ControllerClass {
     InOutClass io = new InOutClass();
     File folder = new File("data");
+    ArrayList<DiaryInfo> dList = new ArrayList<>();
 
-    File[] list =folder.listFiles();
-    BufferedWriter bw = null;
-    FileWriter fw = null;
-    int cnt = 1;
     public void run() {
-        if(!folder.isDirectory()){
-            if(folder.mkdir()){ //폴더 생성 메소드 mkdir()
-                System.out.println("생성 성공");
-            }
-            else {
-                System.out.println("생성 실패");
-            }
-        }// if end
         int menu = -1;
         io.twoPrint("✨✨✨나만의 일기✨✨✨");
 
-        File folder = new File("date");
+        if (!folder.isDirectory()) {
+            if (folder.mkdir()) { //폴더 생성 메소드 mkdir()
+                System.out.println("생성 성공");
+            } else {
+                System.out.println("생성 실패");
+            }
+        }// if end
+
+        if(folder.exists()){
+            File[] list = folder.listFiles();
+            for(File f : list) {
+                if(f.isFile()){
+                    FileReader fr =null;
+                    BufferedReader br =null;
+                    try {
+                        File[] fileList = folder.listFiles();
+
+                        for(File f1 : fileList) {
+                            fr = new FileReader(f1);
+                            br = new BufferedReader(fr);
+
+                            DiaryInfo dInfo = new DiaryInfo();
+                            String str = null;
+                            int count = 1;
+                            while ((str = br.readLine()) != null) {
+                                switch (count) {
+                                    case 1:
+                                        dInfo.setNo(Integer.parseInt(str));
+                                        break;
+                                    case 2:
+                                        dInfo.setDate(str);
+                                        break;
+                                    case 3:
+                                        dInfo.setTitle(str);
+                                        break;
+                                    case 4:
+                                        dInfo.setContent(str);
+                                        break;
+                                    default:
+                                        break;
+                                }
+                                count++;
+                            }
+                            dList.add(dInfo);
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }finally {
+                        try {
+                            br.close();
+                            fr.close();
+                        }
+                        catch (IOException e) { }
+                    }
+                }
+            }
+
+        }
 
         while (true) {
             menuShow();
@@ -59,40 +104,81 @@ public class ControllerClass {
     }
 
     private void outputData() {
-        io.twoPrint("✨✨✨나의일기들✨✨✨");
-        if(list.length==0) {
-            io.twoPrint("작성한일기가 없습니다.\n");
+        if(dList.size()==0){
+            io.twoPrint("저장된 일기가 없습니다.");
             return;
         }
-        for(File f : list) {
-            io.twoPrint(f.toString());
+        io.twoPrint("✨✨✨나만의 일기 전체보기✨✨✨");
+        io.twoPrint("===============================");
+        FileReader fr = null;
+        BufferedReader br = null;
+        for(DiaryInfo f : dList) {
+            io.twoPrint("넘버 : " + f.getNo());
+            io.twoPrint("작성일자 : " + f.getDate());
+            io.twoPrint("제목 : " + f.getTitle());
+            io.twoPrint("내용 : " + f.getContent());
+            io.twoPrint("======================");
         }
+
     }
 
     private void inputData() {
         io.twoPrint("✨✨✨나만의 일기 작성하기✨✨✨");
         io.twoPrint("===============================");
-        Calendar cal = Calendar.getInstance();
-        String today = (cal.get(Calendar.YEAR) + "" + (cal.get(Calendar.MONTH) + 1) + "" + (cal.get(Calendar.DATE)));
+
+        BufferedWriter bw = null;
+        FileWriter fw = null;
         try {
-            File file = new File("data\\" + today + "-" + cnt + ".txt");
+            int no;
+            if (dList.size() == 0) {
+                no = 1;
+            } else {
+                no = getLastNum() + 1;
+            }
+            Calendar cal = Calendar.getInstance();
+            DiaryInfo dInfo = new DiaryInfo();
+
+            String year = cal.get(Calendar.YEAR)+"";
+            int month = (cal.get(Calendar.MONTH) + 1);
+            int day = cal.get(Calendar.DATE);
+            String today = year + String.format("%02d", month) + String.format("%02d", day);
+
+            File file = new File("data\\"+today+"-"+no+".txt");
             fw = new FileWriter(file, true);
             bw = new BufferedWriter(fw);
-            bw.write(today + "\n");
-            bw.write("제목 : " + io.inStr("제목 : ") + "\n\n");
-            bw.write(io.inStr("내용 : "));
-            bw.flush();
-            System.out.println("저장성공");
-            cnt++;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
-            bw.close();
-            fw.close();
-        } catch (IOException ie) {
 
+            dInfo.setNo(no);
+            bw.write(no+"\n");
+            dInfo.setDate(today);
+            bw.write(today+"\n");
+            String title = io.inStr("제목 : ");
+            dInfo.setTitle(title);
+            bw.write(title+"\n");
+            String content = io.inStr("내용 : ");
+            dInfo.setContent(content);
+            bw.write(content+"\n");
+            dList.add(dInfo);
+            bw.flush();
+            io.twoPrint("저장성공");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                bw.close();
+                fw.close();
+            }catch (IOException ie){
+                ie.printStackTrace();
+            }
         }
+
+    }
+
+    private int getLastNum() {
+        int lno = 0;
+        int n = this.dList.size();
+        DiaryInfo d = dList.get(n - 1);
+        lno = d.getNo();
+        return lno;
     }
 
     private void menuShow() {
