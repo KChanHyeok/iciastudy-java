@@ -25,51 +25,45 @@ public class ControllerClass {
             }
         }// if end
 
-        if(folder.exists()){
+        if (folder.exists()) {
             File[] list = folder.listFiles();
-            for(File f : list) {
-                if(f.isFile()){
-                    FileReader fr =null;
-                    BufferedReader br =null;
+            for (File f : list) {
+                if (f.isFile()) {
+                    FileReader fr = null;
+                    BufferedReader br = null;
                     try {
-                        File[] fileList = folder.listFiles();
+                        fr = new FileReader(f);
+                        br = new BufferedReader(fr);
 
-                        for(File f1 : fileList) {
-                            fr = new FileReader(f1);
-                            br = new BufferedReader(fr);
-
-                            DiaryInfo dInfo = new DiaryInfo();
-                            String str = null;
-                            int count = 1;
-                            while ((str = br.readLine()) != null) {
-                                switch (count) {
-                                    case 1:
-                                        dInfo.setNo(Integer.parseInt(str));
-                                        break;
-                                    case 2:
-                                        dInfo.setDate(str);
-                                        break;
-                                    case 3:
-                                        dInfo.setTitle(str);
-                                        break;
-                                    case 4:
-                                        dInfo.setContent(str);
-                                        break;
-                                    default:
-                                        break;
-                                }
-                                count++;
+                        DiaryInfo dInfo = new DiaryInfo();
+                        String str = null;
+                        int count = 1;
+                        while ((str = br.readLine()) != null) {
+                            switch (count) {
+                                case 1:
+                                    dInfo.setNo(Integer.parseInt(str));
+                                    break;
+                                case 2:
+                                    dInfo.setDate(str);
+                                    break;
+                                case 3:
+                                    dInfo.setTitle(str);
+                                    break;
+                                default:
+                                    dInfo.setContent(str);
+                                    break;
                             }
-                            dList.add(dInfo);
+                            count++;
                         }
+                        dList.add(dInfo);
                     } catch (Exception e) {
                         e.printStackTrace();
-                    }finally {
+                    } finally {
                         try {
                             br.close();
                             fr.close();
+                        } catch (IOException e) {
                         }
-                        catch (IOException e) { }
                     }
                 }
             }
@@ -109,15 +103,13 @@ public class ControllerClass {
     }
 
     private void outputData() {
-        if(dList.size()==0){
+        if (dList.size() == 0) {
             io.twoPrint("저장된 일기가 없습니다.");
             return;
         }
         io.twoPrint("✨✨✨나만의 일기 전체보기✨✨✨");
         io.twoPrint("===============================");
-        FileReader fr = null;
-        BufferedReader br = null;
-        for(DiaryInfo f : dList) {
+        for (DiaryInfo f : dList) {
             io.twoPrint("넘버 : " + f.getNo());
             io.twoPrint("작성일자 : " + f.getDate());
             io.twoPrint("제목 : " + f.getTitle());
@@ -143,35 +135,35 @@ public class ControllerClass {
             Calendar cal = Calendar.getInstance();
             DiaryInfo dInfo = new DiaryInfo();
 
-            String year = cal.get(Calendar.YEAR)+"";
+            String year = cal.get(Calendar.YEAR) + "";
             int month = (cal.get(Calendar.MONTH) + 1);
             int day = cal.get(Calendar.DATE);
             String today = year + String.format("%02d", month) + String.format("%02d", day);
 
-            File file = new File("data\\"+today+"-"+no+".txt");
+            File file = new File("data\\" + today + "-" + no + ".txt");
             fw = new FileWriter(file, true);
             bw = new BufferedWriter(fw);
 
             dInfo.setNo(no);
-            bw.write(no+"\n");
+            bw.write(no + "\n");
             dInfo.setDate(today);
-            bw.write(today+"\n");
+            bw.write(today + "\n");
             String title = io.inStr("제목 : ");
             dInfo.setTitle(title);
-            bw.write(title+"\n");
+            bw.write(title + "\n");
             String content = io.inStr("내용 : ");
             dInfo.setContent(content);
-            bw.write(content+"\n");
+            bw.write(content + "\n");
             dList.add(dInfo);
             bw.flush();
             io.twoPrint("저장성공");
         } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
                 bw.close();
                 fw.close();
-            }catch (IOException ie){
+            } catch (IOException ie) {
                 ie.printStackTrace();
             }
         }
