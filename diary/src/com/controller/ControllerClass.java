@@ -67,7 +67,6 @@ public class ControllerClass {
                     }
                 }
             }
-
         }
 
         while (true) {
@@ -99,6 +98,53 @@ public class ControllerClass {
     }
 
     private void updateData() {
+        if (dList.size() == 0) {
+            io.twoPrint("수정할 일기가 없습니다.");
+            return;
+        }
+        BufferedWriter bw = null;
+        FileWriter fw = null;
+        try {
+            io.twoPrint("✨✨✨나의 일기 수정하기✨✨✨");
+            io.twoPrint("===============================");
+            File[] flist = folder.listFiles();
+            String date;
+            for (File f : flist) {
+                io.twoPrint(f.toString());
+            }
+            date = io.inStr("수정할 파일이름을 입력해주세요 : ");
+            int i;
+            DiaryInfo d = null;
+            for (i = 0; i < dList.size(); i++) {
+                d = dList.get(i);
+                if ((d.getDate() + "-" + (i + 1)).equals(date)) {
+                    String title = io.inStr("제목 : ");
+                    d.setTitle(title);
+                    String content = io.inStr("내용 : ");
+                    d.setContent(content);
+                    File file = new File("data\\" + d.getDate() + "-" + d.getNo() + ".txt");
+                    fw = new FileWriter(file, true);
+                    new FileOutputStream(file).close();
+                    bw = new BufferedWriter(fw);
+                    bw.write(d.getNo() + "\n");
+                    bw.write(d.getDate() + "\n");
+                    bw.write(title + "\n");
+                    bw.write(content + "\n");
+                    bw.flush();
+                    io.twoPrint("수정완료되었습니다.\n");
+                    return;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                bw.close();
+                fw.close();
+            } catch (IOException ie) {
+                ie.printStackTrace();
+            }
+        }
 
     }
 
