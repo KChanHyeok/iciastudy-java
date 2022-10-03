@@ -143,6 +143,9 @@ public class ControllerClass {
                 fw.close();
             } catch (IOException ie) {
                 ie.printStackTrace();
+            } catch (NullPointerException np) {
+                io.twoPrint("찾으시는 일기가 없습니다.");
+                return;
             }
         }
 
