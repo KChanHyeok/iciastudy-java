@@ -2,36 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45bc1234-16f4-45bf-9516-0573a7cf5547" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../java-jdbc01/.idea/libraries/lombok.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-jdbc01/.idea/libraries/mysql_connector_java_8_0_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-jdbc01/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-jdbc01/out/production/java-jdbc01/MainClass.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-jdbc01/out/production/java-jdbc01/MainClass2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-jdbc01/out/production/java-jdbc01/dao/DataDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-jdbc01/out/production/java-jdbc01/dao/DataDao2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-jdbc01/out/production/java-jdbc01/dto/MemberDto.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-jdbc01/src/MainClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-jdbc01/src/MainClass2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-jdbc01/src/dao/DataDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-jdbc01/src/dao/DataDao2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-jdbc01/src/dto/MemberDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-jdbc01/summary.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../java-jdbc02/summary.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lombok.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/controller/ControllerClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/dta/DtaClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/dto/MemberDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/view/InOutClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-jdbc01/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../java-jdbc01/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-jdbc01/java-jdbc01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../java-jdbc01/java-jdbc01.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-jdbc02/src/com/controller/DataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-jdbc02/src/com/controller/DataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-jdbc02/src/com/dto/DataDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-jdbc02/src/com/dto/DataDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-jdbc02/summary.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../java-jdbc02/summary.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
