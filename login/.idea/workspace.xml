@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45bc1234-16f4-45bf-9516-0573a7cf5547" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../java-jdbc02/src/com/view/DataView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../java-jdbc02/src/com/controller/DataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-jdbc02/src/com/controller/DataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-jdbc02/src/com/dto/DataDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-jdbc02/src/com/dto/DataDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-jdbc02/summary.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../java-jdbc02/summary.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-jdbc02/src/com/dao/DataDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-jdbc02/src/com/dao/DataDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-jdbc02/src/com/main/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-jdbc02/src/com/main/MainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java-jdbc02/src/com/service/DataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-jdbc02/src/com/service/DataService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
