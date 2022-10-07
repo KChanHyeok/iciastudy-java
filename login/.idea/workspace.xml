@@ -2,11 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45bc1234-16f4-45bf-9516-0573a7cf5547" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../java-jdbc02/src/com/view/DataView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-jdbc02/src/com/controller/DataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-jdbc02/src/com/controller/DataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-jdbc02/src/com/dao/DataDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-jdbc02/src/com/dao/DataDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-jdbc02/src/com/main/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-jdbc02/src/com/main/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java-jdbc02/src/com/service/DataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java-jdbc02/src/com/service/DataService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_manager/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_manager/.idea/libraries/lombok.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_manager/.idea/libraries/mysql_connector_java_8_0_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_manager/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_manager/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_manager/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_manager/data_manager.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_manager/src/com/controller/DataController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_manager/src/com/dao/DataDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_manager/src/com/dto/DataDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_manager/src/com/main/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_manager/src/com/service/DataService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_manager/src/com/view/DataView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_manager/src/com/view/InOutClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data_manager/summary.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../diary-jdbc/.idea/libraries/lombok.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../diary-jdbc/.idea/libraries/mysql_connector_java_8_0_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../diary-jdbc/src/com/controller/DiaryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../diary-jdbc/src/com/dao/DiaryDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../diary-jdbc/src/com/dto/DiaryInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../diary-jdbc/src/com/main/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../diary-jdbc/src/com/service/DiaryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../diary-jdbc/src/com/view/DiaryView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../diary-jdbc/src/com/view/InOutClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../diary-jdbc/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../diary-jdbc/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../diary-jdbc/diary-jdbc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../diary-jdbc/diary-jdbc.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
