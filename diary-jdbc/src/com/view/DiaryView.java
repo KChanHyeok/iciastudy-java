@@ -2,6 +2,8 @@ package com.view;
 
 import com.dto.DiaryInfo;
 
+import java.util.List;
+
 public class DiaryView {
     InOutClass ioc = new InOutClass();
 
@@ -24,7 +26,7 @@ public class DiaryView {
 
     public void subtitle(String str) {
         ioc.twoPrint("<"+str+">");
-        ioc.twoPrint("---------");
+        ioc.twoPrint("----------------");
     }
 
     public void inputDiary(DiaryInfo dInfo) {
@@ -32,5 +34,18 @@ public class DiaryView {
         dInfo.setD_name(ioc.inStr("작성자 : "));
         dInfo.setD_title(ioc.inStr("제목 : "));
         dInfo.setD_content(ioc.inStr("내용 : "));
+    }
+
+    public void outputList(List<DiaryInfo> dList) {
+        subtitle("see my Diarys");
+
+        if(dList==null) {
+            ioc.twoPrint("저장된 일기장이 없습니다");
+            return;
+        }
+        for(DiaryInfo d : dList) {
+            ioc.twoPrint(d.toString());
+            ioc.twoPrint("------------------------");
+        }
     }
 }
