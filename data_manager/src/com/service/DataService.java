@@ -31,4 +31,39 @@ public class DataService {
         //박은 목록을 controller에게 전달.
         return gList;
     }
+
+    public DataDto getData(int code) {
+        DataDto data = null;
+        // 전달 받은 겁색값을 사용하여 DB select 작업을 수행 -> Dao
+        data = dDao.selectData(code);
+        // 검색 결과 데이터를 controller에 전달(반환)
+        return data;
+    }
+
+    public String updateData(DataDto data) {
+        String msg = null;
+
+        //dao에서 DB 수정처리
+        int res = dDao.updateData(data);
+        if(res > 0) {
+            msg = "Update Success";
+        }else {
+            msg = "Update Failed";
+        }
+        return msg;
+    }
+
+    public String deletData(int code) {
+        String msg = null;
+
+        int res = dDao.deleteData(code);
+
+        if(res != 0) {
+            msg = "Delete Success";
+        }else {
+            msg = "Delete Failed";
+        }
+
+        return msg;
+    }
 }

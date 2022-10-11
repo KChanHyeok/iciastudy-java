@@ -35,5 +35,4 @@ public class InOutClass {
     public void onePrint(String str) {
         System.out.print(str);
     }
-
 }

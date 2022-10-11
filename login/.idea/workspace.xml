@@ -2,17 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45bc1234-16f4-45bf-9516-0573a7cf5547" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../board/board.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../board/src/com/controller/BoardController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../board/src/com/main/BoardMainClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../board/src/com/view/InOutClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../diary-jdbc/src/com/controller/DiaryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../diary-jdbc/src/com/controller/DiaryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../diary-jdbc/src/com/dao/DiaryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../diary-jdbc/src/com/dao/DiaryDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../diary-jdbc/src/com/dto/DiaryInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../diary-jdbc/src/com/dto/DiaryInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../diary-jdbc/src/com/main/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../diary-jdbc/src/com/main/MainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../diary-jdbc/src/com/service/DiaryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../diary-jdbc/src/com/service/DiaryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../diary-jdbc/src/com/view/DiaryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../diary-jdbc/src/com/view/DiaryView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../board/.idea/libraries/lombok.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../board/.idea/libraries/mysql_connector_java_8_0_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../board/src/com/dao/BoardDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../board/src/com/dto/BoardInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../board/src/com/service/BoardServiceClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../board/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board/board.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../board/board.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board/src/com/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../board/src/com/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board/src/com/main/BoardMainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../board/src/com/main/BoardMainClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../board/src/com/view/BoardViewClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../board/src/com/view/BoardViewClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_manager/out/production/data_manager/com/controller/DataController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../data_manager/out/production/data_manager/com/controller/DataController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_manager/out/production/data_manager/com/dao/DataDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../data_manager/out/production/data_manager/com/dao/DataDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_manager/out/production/data_manager/com/service/DataService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../data_manager/out/production/data_manager/com/service/DataService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_manager/out/production/data_manager/com/view/DataView.class" beforeDir="false" afterPath="$PROJECT_DIR$/../data_manager/out/production/data_manager/com/view/DataView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_manager/src/com/controller/DataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../data_manager/src/com/controller/DataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_manager/src/com/dao/DataDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../data_manager/src/com/dao/DataDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_manager/src/com/service/DataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../data_manager/src/com/service/DataService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data_manager/src/com/view/DataView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../data_manager/src/com/view/DataView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/InOutClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/InOutClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

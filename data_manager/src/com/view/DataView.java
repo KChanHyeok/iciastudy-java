@@ -46,7 +46,7 @@ public class DataView {
     }
 
     public void subTitle(String str) {
-        ioc.twoPrint("<"+str+">");
+        ioc.twoPrint("<" + str + ">");
         ioc.twoPrint("-------------------");
     }
 
@@ -54,16 +54,58 @@ public class DataView {
         //서브 타이틀 출력
         subTitle("Data Output");
         //목록 내의 데이터 유무 확인
-        if(dList == null) { //빈목록
+        if (dList == null) { //빈목록
             ioc.twoPrint("No data.");
             return; // 메소드 종료
         }
 
-        for(DataDto data : dList) {
+        for (DataDto data : dList) {
             ioc.twoPrint(data.toString());
             ioc.twoPrint("-----------------");
         }
 
 
     }
-}
+
+    public int searchCode(String str) {
+        int code = 0;
+        //서브 타이틀 출력
+        subTitle(str);
+
+        code = ioc.inNum("CODE : ");
+
+        return code;
+    }
+
+    public void outData(DataDto data) {
+        subTitle("Select Data");
+        if (data == null) {
+            printMsg("No Data.");
+            return;
+        }
+
+        ioc.twoPrint(data.toString());
+        ioc.twoPrint("-----------------");
+    }
+
+    public void updateInput(DataDto data) {
+        subTitle("Update Data");
+
+        //변경을 하는 값만 받아서 저장.
+        String str = null;
+        int num = 0;
+
+        str = ioc.inStr("STR : ");
+        if(!str.equals("")) { //변경할 값을 입력한 상태
+            data.setM_str(str);
+        }
+        num = ioc.inNum("INT : ");
+        if(num != -1) { // 변경할 숫자가 입력된 경우
+            data.setM_int(num);
+        }
+        str = ioc.inStr("DATE(yyyy-mm-dd) : ");
+        if(!str.equals("")) {
+            data.setM_date(str);
+        }
+    }
+}// class end
