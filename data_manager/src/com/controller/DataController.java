@@ -52,12 +52,20 @@ public class DataController {
     } // run end
 
     private void deleteData() {
+        // 삭제 코드 검색
         int code = dView.searchCode("Delete Data");
         DataDto data = dServ.getData(code);
+        dView.outData(data);
 
-        if( data != null) {
-            String msg =dServ.deletData(code);
-            dView.printMsg(msg);
+        if (data != null) {
+            String yn = dView.isDelete();
+            if(yn.equals("y")) {
+                // service로 code를 넘겨 삭제처리하고 결과 메시지를 받는다.
+                String msg = dServ.deletData(code);
+                dView.printMsg(msg);
+            }else {
+                dView.printMsg("OK cancel");
+            }
         }
     }
 

@@ -108,4 +108,9 @@ public class DataView {
             data.setM_date(str);
         }
     }
+
+    public String isDelete() {
+        String yn = ioc.inStr("Delete Ok?(y/n)");
+        return yn;
+    }
 }// class end

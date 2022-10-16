@@ -2,16 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45bc1234-16f4-45bf-9516-0573a7cf5547" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../board/.idea/libraries/lombok.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../board/.idea/libraries/mysql_connector_java_8_0_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../board/src/com/dao/BoardDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../board/src/com/dto/BoardInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../board/src/com/service/BoardServiceClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../board/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../board/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../board/board.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../board/board.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../board/src/com/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../board/src/com/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../board/src/com/main/BoardMainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../board/src/com/main/BoardMainClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../board/src/com/view/BoardViewClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../board/src/com/view/BoardViewClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/.idea/libraries/lombok.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/.idea/libraries/mysql_connector_java_8_0_30.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/room-reservation.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/src/com/controller/ControllerClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/src/com/dao/BookingDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/src/com/dao/MemberDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/src/com/dao/RoomTypeDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/src/com/dto/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/src/com/dto/BookingDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/src/com/dto/MemberDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/src/com/dto/RoomDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/src/com/dto/RoomType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/src/com/main/MainClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/src/com/service/BookingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/src/com/service/MemberService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/src/com/service/RoomTypeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/src/com/view/DataView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../room-reservation/src/com/view/InOutClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../data_manager/out/production/data_manager/com/controller/DataController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../data_manager/out/production/data_manager/com/controller/DataController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../data_manager/out/production/data_manager/com/dao/DataDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/../data_manager/out/production/data_manager/com/dao/DataDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../data_manager/out/production/data_manager/com/service/DataService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../data_manager/out/production/data_manager/com/service/DataService.class" afterDir="false" />
@@ -21,7 +35,6 @@
       <change beforePath="$PROJECT_DIR$/../data_manager/src/com/service/DataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../data_manager/src/com/service/DataService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../data_manager/src/com/view/DataView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../data_manager/src/com/view/DataView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/InOutClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/InOutClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

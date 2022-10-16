@@ -58,7 +58,7 @@ public class DataService {
 
         int res = dDao.deleteData(code);
 
-        if(res != 0) {
+        if(res > 0) {
             msg = "Delete Success";
         }else {
             msg = "Delete Failed";

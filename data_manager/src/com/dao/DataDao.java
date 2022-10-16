@@ -52,6 +52,7 @@ public class DataDao {
             pstmt.setInt(2, data.getM_int());
             pstmt.setDate(3, Date.valueOf(data.getM_date()));
             //쿼리문 실행 및 실행 결과 받기
+
             result = pstmt.executeUpdate();
         } catch (SQLException e) {
             result = 0; //삽입 실패
@@ -161,9 +162,10 @@ public class DataDao {
             pstmt.setInt(1, code);
 
             result = pstmt.executeUpdate();
-
         } catch (SQLException e) {
             result = 0;
+        }finally {
+            close();
         }
         return result;
     }
